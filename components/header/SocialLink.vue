@@ -40,32 +40,32 @@ const socialInfo = computed(() => {
     case "medium":
       return {
         label: "Blog",
-        url: "https://zksync.mirror.xyz/",
+        url: "https://medium.com/@Zeeve",
         icon: IconMirror,
       };
     case "discord":
       return {
         label: "Discord Community",
-        url: "https://join.zksync.dev/",
+        url: "https://discord.com/invite/6GjqQ78bBz",
         icon: IconDiscord,
       };
     case "telegram":
       return {
         label: "Telegram Support",
-        url: "https://t.me/zksync",
+        url: "https://t.me/ZeeveDeeptech",
         icon: IconTelegram,
       };
     case "twitter":
       return {
         label: "Twitter Community",
-        url: "https://twitter.com/zksync",
+        url: "https://twitter.com/0xZeeve",
         icon: IconTwitter,
       };
     case "email":
     default:
       return {
         label: "Email",
-        url: "https://zksync.io/contact",
+        url: "https://www.zeeve.io/contact",
         icon: IconEmail,
       };
   }

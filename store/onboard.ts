@@ -76,11 +76,11 @@ export const useOnboardStore = defineStore("onboard", () => {
 
   const { publicClient } = configureChains(extendedChains, [publicProvider()]);
   const metadata = {
-    name: "zkSync Portal",
+    name: "Zeeve Portal",
     description:
-      "zkSync Portal provides all the required tools for working with Era and Lite networks such as Wallet, Bridge & Faucet functionality.",
-    url: "https://portal.zksync.io",
-    icons: ["https://portal.zksync.io/icon.png"],
+      "Zeeve Portal provides all the required tools for working with Hyperchains and Lite networks such as Wallet, Bridge & Faucet functionality.",
+    url: "",
+    icons: [""],
   };
   const wagmiConfig = createConfig({
     autoConnect: true,
@@ -135,8 +135,8 @@ export const useOnboardStore = defineStore("onboard", () => {
       "38f5d18bd8522c244bdd70cb4a68e0e718865155811c043f052fb9f1c51de662",
       "1aa28414c95f5024133faf5766d376bb9c853c280d158cd3e22dc2b7b0a95a2d",
     ],
-    termsConditionsUrl: "https://zksync.io/terms",
-    privacyPolicyUrl: "https://zksync.io/privacy",
+    termsConditionsUrl: "https://www.zeeve.io/privacy-policy/",
+    privacyPolicyUrl: "https://www.zeeve.io/privacy-policy/",
     themeMode: selectedColorMode.value,
   });
 

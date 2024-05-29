@@ -19,7 +19,7 @@
       <CommonAlert v-if="status === 'done'" class="mt-3" variant="success" :icon="InformationCircleIcon">
         <p>
           Success! Your free test tokens are on their way and will be available on your account soon. Welcome to zkSync
-          Era!
+          Hyperchains!
         </p>
       </CommonAlert>
       <CommonAlert v-else-if="status === 'processing'" class="mt-3" variant="neutral" :icon="InformationCircleIcon">
@@ -28,8 +28,8 @@
 
       <template v-if="status === 'done'">
         <TransactionConfirmModalFooter v-if="faucetNetwork.key === selectedNetwork.key">
-          <CommonButtonTopLink as="a" href="https://ecosystem.zksync.io" target="_blank">
-            Explore zkSync Era ecosystem
+          <CommonButtonTopLink as="a" href="" target="_blank">
+            Explore zkSync Hyperchains ecosystem
             <ArrowUpRightIcon class="ml-1 mt-0.5 h-3.5 w-3.5" />
           </CommonButtonTopLink>
           <CommonButton as="RouterLink" :to="{ name: 'index' }" class="mx-auto" variant="primary-solid">

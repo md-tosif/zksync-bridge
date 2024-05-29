@@ -8,7 +8,7 @@
         v-bind="destinations.era"
         as="RouterLink"
         :to="{ name: 'transaction-zksync-era-send', query: $route.query }"
-        :description="`Send on zkSync Era∎`"
+        :description="`Send on zkSync Hyperchains∎`"
       />
     </CommonCardWithLineButtons>
     <CommonCardWithLineButtons class="mt-1">

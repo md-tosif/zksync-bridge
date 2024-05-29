@@ -135,7 +135,7 @@
           <CommonButton
             v-else-if="!isCustomNode"
             as="a"
-            href="https://ecosystem.zksync.io"
+            href=""
             target="_blank"
             class="mx-auto"
             variant="primary-solid"

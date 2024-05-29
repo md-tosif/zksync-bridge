@@ -10,7 +10,7 @@
           <NuxtLink v-if="logoLeadsHome" :to="{ name: 'index' }">
             <IconsZkSync class="w-[120px]" />
           </NuxtLink>
-          <a v-else href="https://zksync.io" target="_blank">
+          <a v-else href="https://zeeve.io" target="_blank">
             <IconsZkSync class="w-[120px]" />
           </a>
         </div>
@@ -99,10 +99,10 @@ const learnNav: Navigation[] = reactive([
   {
     title: "",
     items: [
-      { label: "Freedom is our mission", url: "https://zksync.io/ethos" },
-      { label: "Hyperscalibility", url: "https://zksync.io/hyperscalability" },
-      { label: "Security", url: "https://zksync.io/security" },
-      { label: "Game-changing UX", url: "https://zksync.io/ux" },
+      { label: "Freedom is our mission", url: "" },
+      { label: "Hyperscalibility", url: "" },
+      { label: "Security", url: "" },
+      { label: "Game-changing UX", url: "" },
     ],
   },
 ]);
@@ -111,9 +111,9 @@ const buildNav: Navigation[] = reactive([
   {
     title: "",
     items: [
-      { label: "Quickstart", url: "https://era.zksync.io/docs/dev/building-on-zksync/hello-world.html" },
-      { label: "Documentation", url: "https://era.zksync.io/docs/" },
-      { label: "Web3 API", url: "https://era.zksync.io/docs/api/api.html" },
+      { label: "Quickstart", url: "" },
+      { label: "Documentation", url: "" },
+      { label: "Web3 API", url: "" },
     ],
   },
   {
@@ -121,23 +121,23 @@ const buildNav: Navigation[] = reactive([
     items: [
       {
         label: "Contract deployment",
-        url: "https://era.zksync.io/docs/dev/building-on-zksync/contracts/contract-deployment.html",
+        url: "",
       },
-      { label: "Bridging assets", url: "https://era.zksync.io/docs/dev/developer-guides/bridging/bridging-asset.html" },
-      { label: "Account abstraction", url: "https://era.zksync.io/docs/dev/tutorials/custom-aa-tutorial.html" },
+      { label: "Bridging assets", url: "" },
+      { label: "Account abstraction", url: "" },
       {
         label: "Building custom Paymasters",
-        url: "https://era.zksync.io/docs/dev/tutorials/custom-paymaster-tutorial.html",
+        url: "",
       },
-      { label: "Cross-chain governance", url: "https://era.zksync.io/docs/dev/tutorials/cross-chain-tutorial.html" },
+      { label: "Cross-chain governance", url: "" },
     ],
   },
   {
     title: "Tools",
     items: [
-      { label: "Javascript SDK", url: "https://era.zksync.io/docs/api/js" },
-      { label: "Hardhat plugins", url: "https://era.zksync.io/docs/api/hardhat" },
-      { label: "zkSync Era CLI", url: "https://era.zksync.io/docs/api/tools/zksync-cli/" },
+      { label: "Javascript SDK", url: "" },
+      { label: "Hardhat plugins", url: "" },
+      { label: "zkSync Era CLI", url: "" },
     ],
   },
 ]);
@@ -146,26 +146,26 @@ const networkNav: Navigation[] = reactive([
   {
     title: "zkSync Era (v2)",
     items: [
-      { label: "Intro to zkSync Era", url: "https://era.zksync.io/docs/dev/fundamentals/zkSync.html" },
-      { label: "Wallet Portal", url: "https://portal.zksync.io/" },
-      { label: "Block Explorer", url: "https://explorer.zksync.io/" },
+      { label: "Intro to zkSync Era", url: "" },
+      { label: "Wallet Portal", url: "" },
+      { label: "Block Explorer", url: "" },
     ],
   },
   {
     title: "zkSync Lite (v1)",
     items: [
-      { label: "Intro to zkSync Lite", url: "https://docs.zksync.io/userdocs/intro/" },
-      { label: "Wallet Portal", url: "https://lite.zksync.io/" },
-      { label: "Block Explorer", url: "https://zkscan.io/" },
+      { label: "Intro to zkSync Lite", url: "" },
+      { label: "Wallet Portal", url: "" },
+      { label: "Block Explorer", url: "" },
     ],
   },
   {
     title: "Ecosystem",
     items: [
-      { label: "Explore the Ecosystem", url: "https://ecosystem.zksync.io/" },
+      { label: "Explore the Ecosystem", url: "" },
       {
         label: "Brand assets",
-        url: "https://matterlabs.notion.site/zkSync-Brand-Resources-750bb7b1f3d14ebe9f539a86901c4a1c/",
+        url: "",
       },
     ],
   },

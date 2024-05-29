@@ -2,7 +2,7 @@
   <CommonModal v-bind="$attrs" title="Change network" @close="closeModal">
     <template v-if="networks.includes('era')">
       <div v-if="networks.length > 1" class="mb-2 flex items-center justify-between gap-2">
-        <DestinationLabel label="zkSync Era∎" :icon="IconsEra" />
+        <DestinationLabel label="zkSync Hyperchains ∎" :icon="IconsEra" />
         <div class="text-right text-sm leading-tight text-gray-secondary dark:text-neutral-400 md:text-base">
           Preferred network
         </div>

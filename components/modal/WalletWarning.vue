@@ -1,8 +1,8 @@
 <template>
   <CommonModal :initialFocus="checkbox" v-model:opened="walletWarningModal" :closable="false" title="Wallet warning">
     <p class="leading-normal">
-      Make sure your wallet supports zkSync Era network before adding funds to your account. Otherwise, this can result
-      in <span class="font-medium text-red-600">loss of funds</span>. See the list of supported wallets on the
+      Make sure your wallet supports zkSync Hyperchains network before adding funds to your account. Otherwise, this can
+      result in <span class="font-medium text-red-600">loss of funds</span>. See the list of supported wallets on the
       <a class="link" href="https://zksync.dappradar.com/ecosystem?category-de=wallet" target="_blank">Ecosystem</a>
       website.
     </p>

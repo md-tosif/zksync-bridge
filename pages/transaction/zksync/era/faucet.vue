@@ -16,9 +16,7 @@
       <p class="mt-3 text-center leading-tight wrap-balance">
         The faucet is <span class="font-medium">out of funds currently</span>. If you want to test your app, consider
         testing it locally with access to rich wallets
-        <a class="link" href="https://era.zksync.io/docs/tools/testing/" target="_blank"
-          >following the instructions from our docs</a
-        >.
+        <a class="link" href="" target="_blank">following the instructions from our docs</a>.
       </p>
       <div class="mt-3 text-center leading-tight wrap-balance">
         You can also request Goerli ETH from one of the following third party faucets:
@@ -40,8 +38,8 @@
 
     <div v-else>
       <p class="mt-3 text-center leading-tight wrap-balance">
-        Ready to explore <span class="font-medium">zkSync Era</span>? Get started with our faucet tool, offering free
-        test tokens, once per day, to enrich your crypto journey.
+        Ready to explore <span class="font-medium">zkSync Hyperchains</span>? Get started with our faucet tool, offering
+        free test tokens, once per day, to enrich your crypto journey.
       </p>
 
       <div class="mt-5 flex flex-wrap justify-center gap-1.5 lg:px-4">
