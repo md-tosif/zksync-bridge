@@ -14,28 +14,6 @@
             <IconsZkSync class="w-[120px]" />
           </a>
         </div>
-        <div class="navigation-container">
-          <PopoverGroup class="popover-group">
-            <DropdownPopover on-hover>
-              Learn
-              <template #items>
-                <DropdownContent :navigation="learnNav" label="Learn" />
-              </template>
-            </DropdownPopover>
-            <DropdownPopover on-hover>
-              Build
-              <template #items>
-                <DropdownContent :navigation="buildNav" label="Build" />
-              </template>
-            </DropdownPopover>
-            <DropdownPopover on-hover>
-              Network
-              <template #items>
-                <DropdownContent :navigation="networkNav" label="Network" />
-              </template>
-            </DropdownPopover>
-          </PopoverGroup>
-        </div>
         <div class="right-side-menu">
           <RightSideMenu />
         </div>
@@ -46,13 +24,6 @@
           </PopoverButton>
         </div>
       </div>
-      <PopoverPanel class="panel-container-mobile">
-        <PopoverGroup class="popover-group">
-          <DropdownContent :navigation="learnNav" label="Learn" />
-          <DropdownContent :navigation="buildNav" label="Build" />
-          <DropdownContent :navigation="networkNav" label="Network" />
-        </PopoverGroup>
-      </PopoverPanel>
     </Popover>
   </div>
 </template>

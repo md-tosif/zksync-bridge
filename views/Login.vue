@@ -78,8 +78,8 @@
       </button>
       <div></div>
       <a
-        href="https://github.com/matter-labs/dapp-portal"
-        title="zkSync Portal GitHub page"
+        href="https://github.com/Zeeve-App/zksync-bridge.git"
+        title="Zeeve Portal GitHub page"
         target="_blank"
         rel="noopener"
         class="block w-max text-gray-500 transition-colors hover:text-gray-900 dark:hover:text-white"
