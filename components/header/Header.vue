@@ -156,7 +156,7 @@ const networkNav: Navigation[] = reactive([
       @apply px-6;
     }
     @media screen and (min-width: 1024px) {
-      @apply grid grid-cols-[216px_1fr_216px] px-9;
+      @apply flex grid-cols-[216px_1fr_216px] px-9;
     }
 
     .logo-container {
