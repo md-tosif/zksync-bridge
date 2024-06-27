@@ -59,12 +59,12 @@
       </div>
     </div>
 
-    <h1 class="h1 text-center">zkSync Portal</h1>
+    <h1 class="h1 text-center">Zeeve Portal</h1>
     <button autofocus class="login-btn" @click="onboardStore.openModal" data-testid="login-button">
       <div class="login-btn-inner">
         <IconsEra v-if="version === 'era'" class="login-btn-icon" />
         <IconsZkSyncLite v-else class="login-btn-icon" />
-        <div class="login-btn-description">Connect your Ethereum wallet to zkSync Portal</div>
+        <div class="login-btn-description">Connect your Ethereum wallet to Zeeve Portal</div>
         <ChevronRightIcon class="block h-5 w-5 flex-none" aria-hidden="true" />
       </div>
     </button>
@@ -144,7 +144,7 @@ const networkChangeModalOpened = ref(false);
       @apply flex w-full items-center justify-between gap-2.5 rounded-[1.24rem] p-5 pr-6 transition-colors;
     }
     .login-btn-icon {
-      @apply mr-2 h-10 w-10 flex-none rounded-full bg-gray p-2 text-black dark:bg-white;
+      @apply mr-2 h-10 w-10 flex-none overflow-visible rounded-full bg-gray p-2.5 text-black dark:bg-white;
     }
     .login-btn-description {
       @apply text-xs font-light leading-tight sm:text-sm;

@@ -81,8 +81,8 @@ export const eraNetworks: EraNetwork[] = [
   {
     id: 324,
     key: "era-mainnet",
-    name: "zkSync Mainnet",
-    shortName: "zkSync",
+    name: "Mainnet",
+    shortName: "Mainnet",
     rpcUrl: "https://mainnet.era.zksync.io",
     blockExplorerUrl: "https://explorer.zksync.io",
     blockExplorerApi: "https://block-explorer-api.mainnet.zksync.io",
@@ -95,8 +95,8 @@ export const eraNetworks: EraNetwork[] = [
   {
     id: 300,
     key: "era-sepolia",
-    name: "zkSync Sepolia Testnet",
-    shortName: "zkSync Sepolia",
+    name: "Sepolia Testnet",
+    shortName: "Sepolia",
     rpcUrl: "https://sepolia.era.zksync.dev",
     blockExplorerUrl: "https://sepolia.explorer.zksync.io",
     blockExplorerApi: "https://block-explorer-api.sepolia.zksync.dev",
@@ -109,8 +109,8 @@ export const eraNetworks: EraNetwork[] = [
   {
     id: 280,
     key: "era-goerli",
-    name: "zkSync Goerli Testnet",
-    shortName: "zkSync Goerli",
+    name: "Goerli Testnet",
+    shortName: "Goerli",
     rpcUrl: "https://testnet.era.zksync.dev",
     blockExplorerUrl: "https://goerli.explorer.zksync.io",
     blockExplorerApi: "https://block-explorer-api.testnets.zksync.dev",
@@ -124,8 +124,8 @@ export const eraNetworks: EraNetwork[] = [
   {
     id: 270,
     key: "era-stage",
-    name: "zkSync Stage",
-    shortName: "zkSync Stage",
+    name: "Stage",
+    shortName: "Stage",
     rpcUrl: "https://z2-dev-api.zksync.dev",
     blockExplorerUrl: "https://goerli-beta.staging-scan-v2.zksync.dev",
     blockExplorerApi: "https://block-explorer-api.stage.zksync.dev",
@@ -139,7 +139,7 @@ export type ZkSyncLiteNetwork = L2Network & { network: Network };
 export const zkSyncLiteNetworks: ZkSyncLiteNetwork[] = [
   {
     key: "lite-mainnet",
-    name: "zkSync Lite Mainnet",
+    name: "Lite Mainnet",
     network: "mainnet",
     shortName: "Lite Mainnet",
     blockExplorerUrl: "https://zkscan.io",
@@ -147,7 +147,7 @@ export const zkSyncLiteNetworks: ZkSyncLiteNetwork[] = [
   },
   {
     key: "lite-goerli",
-    name: "zkSync Lite Goerli",
+    name: "Lite Goerli",
     network: "goerli",
     shortName: "Lite Goerli",
     blockExplorerUrl: "https://goerli.zkscan.io",

@@ -62,6 +62,6 @@ Feature: Artifacts - UI
   @id1363 @loginPage
   Scenario: Check artifacts on the Login page
     Given I'm logged out
-    Then Element with "text" "Connect your Ethereum wallet to zkSync Portal" should be "visible"
+    Then Element with "text" "Connect your Ethereum wallet to Zeeve Portal" should be "visible"
     Then Element with "testId" "network-switcher" should be "visible"
-    Then Element with "title" "zkSync Portal GitHub page" should be "visible"
+    Then Element with "title" "Zeeve Portal GitHub page" should be "visible"

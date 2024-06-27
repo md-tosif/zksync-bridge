@@ -15,7 +15,7 @@
         v-bind="destinations.zkSyncLite"
         as="RouterLink"
         :to="{ name: 'transaction-zksync-lite-send', query: $route.query }"
-        description="Send inside zkSync Lite network"
+        description="Send inside demo network"
       />
       <DestinationItem
         v-if="zkSyncLiteNetwork.l1Network"

@@ -45,7 +45,7 @@ export const useLiteTokensStore = defineStore("liteTokens", () => {
       const price = await provider.getTokenPrice(tokenSymbol);
       tokenPrices.value[tokenSymbol] = typeof price === "number" ? price : 0;
     } catch (error) {
-      console.warn(`Failed to get price for zkSync Lite token ${tokenSymbol}`, error);
+      console.warn(`Failed to get price for demo token ${tokenSymbol}`, error);
       tokenPrices.value[tokenSymbol] = undefined;
     }
   };

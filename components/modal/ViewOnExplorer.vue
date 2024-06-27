@@ -7,6 +7,7 @@
         v-bind="selectedNetworkLink.destination"
         as="a"
         :icon="ArrowUpRightIcon"
+        iconUrl="https://bunny-wp-pullzone-nb318evfcx.b-cdn.net/wp-content/uploads/2022/10/logo-2.svg"
         :href="selectedNetworkLink.link"
         target="_blank"
       />

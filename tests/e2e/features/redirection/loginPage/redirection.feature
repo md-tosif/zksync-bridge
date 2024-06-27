@@ -9,7 +9,7 @@ Feature: External Redirection on the Login Page
 
     Examples:
       | Selector type | Selector value            | url                                        |
-      | title         | zkSync Portal GitHub page | https://github.com/matter-labs/dapp-portal |
+      | title         | Zeeve Portal GitHub page | https://github.com/matter-labs/dapp-portal |
       | id            | zk-sync-white-total       | https://zksync.io/                         |
 
   @id1586

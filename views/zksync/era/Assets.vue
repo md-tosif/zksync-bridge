@@ -83,7 +83,7 @@
             as="div"
             :icon-url="destinations.era.iconUrl"
             label="Not enough tokens?"
-            description="Use official zkSync Hyperchains faucet"
+            description="Use official Zeeve Hyperchains faucet"
           >
             <template #right>
               <CommonButton
