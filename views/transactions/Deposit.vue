@@ -50,7 +50,7 @@
           :balances="availableBalances"
           :max-amount="maxAmount"
           :approve-required="!enoughAllowance && (!tokenCustomBridge || !tokenCustomBridge.bridgingDisabled)"
-          :loading="tokensRequestInProgress || balanceInProgress"
+          :loading="tokensRequestInProgress || balanceInProgress || feeLoading"
           class="mb-block-padding-1/2 sm:mb-block-gap"
         >
           <template #dropdown>
@@ -130,14 +130,7 @@
         <CommonButton type="submit" variant="primary" class="mt-block-gap w-full gap-1" @click="buttonContinue()">
           I understand, proceed to bridge
         </CommonButton>
-        <CommonButton
-          as="a"
-          href="https://zksync.dappradar.com/ecosystem?category=defi_bridge"
-          target="_blank"
-          size="sm"
-          class="mx-auto mt-block-gap w-max"
-          @click="disableWalletWarning()"
-        >
+        <CommonButton size="sm" class="mx-auto mt-block-gap w-max" @click="disableWalletWarning()">
           Don't show again
         </CommonButton>
       </template>
@@ -196,7 +189,7 @@
                 >{{
                   feeToken?.price
                     ? removeSmallAmountPretty(recommendedBalance, feeToken?.decimals, feeToken?.price)
-                    : parseTokenAmount(recommendedBalance, ETH_TOKEN.decimals)
+                    : parseTokenAmount(recommendedBalance, feeToken?.decimals || 18)
                 }}
                 {{ feeToken?.symbol }}</span
               >
@@ -405,7 +398,7 @@ const { account, isConnected, walletNotSupported, walletWarningDisabled } = stor
 const { eraNetwork } = storeToRefs(providerStore);
 const { destinations } = storeToRefs(useDestinationsStore());
 const { l1BlockExplorerUrl } = storeToRefs(useNetworkStore());
-const { l1Tokens, tokensRequestInProgress, tokensRequestError } = storeToRefs(tokensStore);
+const { l1Tokens, baseToken, tokensRequestInProgress, tokensRequestError } = storeToRefs(tokensStore);
 const { balance, balanceInProgress, balanceError } = storeToRefs(zkSyncEthereumBalance);
 
 const toNetworkModalOpened = ref(false);
@@ -438,7 +431,8 @@ const routeTokenAddress = computed(() => {
   return checksumAddress(route.query.token);
 });
 const defaultToken = computed(
-  () => availableTokens.value.find((e) => e.address === ETH_TOKEN.l1Address) ?? availableTokens.value[0] ?? undefined
+  () =>
+    availableTokens.value.find((e) => e.address === baseToken.value?.l1Address) ?? availableTokens.value[0] ?? undefined
 );
 const selectedTokenAddress = ref<string | undefined>(routeTokenAddress.value ?? defaultToken.value?.address);
 const selectedToken = computed<Token | undefined>(() => {
@@ -486,7 +480,7 @@ const {
 } = useAllowance(
   computed(() => account.value.address),
   computed(() => selectedToken.value?.address),
-  async () => (await providerStore.requestProvider().getDefaultBridgeAddresses()).erc20L1
+  async () => (await providerStore.requestProvider().getDefaultBridgeAddresses()).sharedL1
 );
 const enoughAllowance = computed(() => {
   if (!allowance.value || !selectedToken.value) {

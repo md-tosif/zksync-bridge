@@ -53,7 +53,7 @@
           :tokens="availableTokens"
           :balances="availableBalances"
           :max-amount="maxAmount"
-          :loading="tokensRequestInProgress || balanceInProgress"
+          :loading="tokensRequestInProgress || balanceInProgress || feeLoading"
         >
           <template v-if="type === 'withdrawal' && account.address" #token-dropdown-bottom>
             <CommonAlert class="sticky bottom-0 mt-6" variant="neutral" :icon="InformationCircleIcon">
@@ -109,7 +109,7 @@
       </template>
       <template v-else-if="step === 'withdrawal-finalization-warning'">
         <CommonAlert variant="warning" :icon="ExclamationTriangleIcon" class="mb-block-padding-1/2 sm:mb-block-gap">
-          <p>
+          <p v-if="!isCustomNode">
             After a
             <a class="underline underline-offset-2" :href="ZKSYNC_WITHDRAWAL_DELAY" target="_blank"
               >24-hour withdrawal delay</a
@@ -121,6 +121,10 @@
               class="underline underline-offset-2"
               >third-party bridges</a
             >.
+          </p>
+          <p v-else>
+            After transaction is executed on {{ eraNetwork.l1Network?.name }}, you will need to manually claim your
+            funds which requires paying another transaction fee on {{ eraNetwork.l1Network?.name }}.
           </p>
         </CommonAlert>
         <CommonButton
@@ -140,7 +144,7 @@
       </template>
       <template v-else-if="step === 'confirm'">
         <CommonAlert
-          v-if="type === 'withdrawal'"
+          v-if="type === 'withdrawal' && !isCustomNode"
           variant="warning"
           :icon="ExclamationTriangleIcon"
           class="mb-block-padding-1/2 sm:mb-block-gap"
@@ -241,7 +245,7 @@
                   <CommonAlert variant="error" :icon="ExclamationTriangleIcon">
                     <p>
                       {{
-                        selectedToken?.address === ETH_TOKEN.address
+                        selectedToken?.address === L2_BASE_TOKEN_ADDRESS
                           ? "The fee has changed since the last estimation. "
                           : ""
                       }}Insufficient <span class="font-medium">{{ selectedToken?.symbol }}</span> balance to pay for
@@ -348,7 +352,7 @@ const routeTokenAddress = computed(() => {
   return checksumAddress(route.query.token);
 });
 const defaultToken = computed(
-  () => availableTokens.value.find((e) => e.address === ETH_TOKEN.l1Address) ?? availableTokens.value[0] ?? undefined
+  () => availableTokens.value.find((e) => e.address === L2_BASE_TOKEN_ADDRESS) ?? availableTokens.value[0] ?? undefined
 );
 const selectedTokenAddress = ref<string | undefined>(routeTokenAddress.value ?? defaultToken.value?.address);
 const selectedToken = computed<Token | undefined>(() => {
@@ -491,8 +495,7 @@ const withdrawalManualFinalizationRequired = computed(() => {
   if (!transaction.value) return false;
   return (
     props.type === "withdrawal" &&
-    (isCustomNode ||
-      isWithdrawalManualFinalizationRequired(transaction.value.token, eraNetwork.value.l1Network?.id || -1))
+    isWithdrawalManualFinalizationRequired(transaction.value.token, eraNetwork.value.l1Network?.id || -1)
   );
 });
 
