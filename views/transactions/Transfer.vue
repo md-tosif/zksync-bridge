@@ -115,26 +115,14 @@
               >24-hour withdrawal delay</a
             >, you will need to manually claim your funds which requires paying another transaction fee on
             {{ eraNetwork.l1Network?.name }}. Alternatively you can use
-            <a
-              href="https://zksync.dappradar.com/ecosystem?category=defi_bridge"
-              target="_blank"
-              class="underline underline-offset-2"
-              >third-party bridges</a
-            >.
+            <a href="" target="_blank" class="underline underline-offset-2">third-party bridges</a>.
           </p>
           <p v-else>
             After transaction is executed on {{ eraNetwork.l1Network?.name }}, you will need to manually claim your
             funds which requires paying another transaction fee on {{ eraNetwork.l1Network?.name }}.
           </p>
         </CommonAlert>
-        <CommonButton
-          as="a"
-          href="https://zksync.dappradar.com/ecosystem?category=defi_bridge"
-          target="_blank"
-          type="submit"
-          variant="primary"
-          class="mt-block-gap w-full gap-1"
-        >
+        <CommonButton as="a" href="" target="_blank" type="submit" variant="primary" class="mt-block-gap w-full gap-1">
           See third-party bridges
           <ArrowTopRightOnSquareIcon class="h-6 w-6" aria-hidden="true" />
         </CommonButton>

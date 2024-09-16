@@ -51,8 +51,8 @@ export const useOnboardStore = defineStore("onboard", () => {
   const web3modal = createWeb3Modal({
     wagmiConfig,
     projectId: portalRuntimeConfig.walletConnectProjectId!,
-    termsConditionsUrl: "https://zksync.io/terms",
-    privacyPolicyUrl: "https://zksync.io/privacy",
+    termsConditionsUrl: "https://www.zeeve.io/terms-and-conditions/",
+    privacyPolicyUrl: "https://www.zeeve.io/privacy-policy/",
     themeMode: selectedColorMode.value,
   });
 

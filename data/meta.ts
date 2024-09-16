@@ -1,18 +1,18 @@
 export const portal = {
-  title: "zkSync Portal | View balances, transfer and bridge tokens",
+  title: "Zeeve Portal | View balances, transfer and bridge tokens",
   description:
-    "zkSync Portal allows you to view your balances, transfer tokens and bridge assets between zkSync and Ethereum",
+    "Zeeve Portal allows you to view your balances, transfer tokens and bridge assets between zkSync Hyperchains and Ethereum",
   previewImg: {
-    src: "https://portal.zksync.io/preview.png",
-    alt: "zkSync Portal",
+    src: "",
+    alt: "Zeeve Portal",
   },
 };
 export const bridge = {
-  title: "zkSync Bridge | Transfer funds between zkSync and Ethereum",
+  title: "Zeeve Bridge | Transfer funds between zkSync Hyperchains and Ethereum",
   description:
-    "With the zkSync Bridge you can easily deposit tokens to zkSync. Enjoy faster, cheaper and more efficient transactions with the future proof zkEVM scaling Ethereum's security and values.",
+    "With the Zeeve Bridge you can easily deposit tokens to zkSync Hyperchains. Enjoy faster, cheaper and more efficient transactions with the future proof zkEVM scaling Ethereum's security and values.",
   previewImg: {
-    src: "https://portal.zksync.io/preview.png",
-    alt: "zkSync Bridge",
+    src: "",
+    alt: "Zeeve Bridge",
   },
 };

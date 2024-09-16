@@ -86,7 +86,7 @@
 
       <template v-if="noBalances">
         <TypographyCategoryLabel>
-          To start using zkSync ecosystem, deposit tokens in any convenient way
+          To start using Zeeve ecosystem, deposit tokens in any convenient way
         </TypographyCategoryLabel>
 
         <div class="flex flex-col gap-block-gap">
@@ -104,7 +104,7 @@
         </div>
       </template>
       <template v-else>
-        <TypographyCategoryLabel>Deposit more tokens to zkSync</TypographyCategoryLabel>
+        <TypographyCategoryLabel>Deposit more tokens to Zeeve</TypographyCategoryLabel>
 
         <CommonCardWithLineButtons>
           <DestinationItem v-for="(item, index) in depositMethods" :key="index" v-bind="item.props">
@@ -182,7 +182,7 @@ const depositMethods = computed(() => {
         label: "Faucet",
         description: "Receive testnet funds",
         as: "a",
-        href: "https://docs.zksync.io/build/tooling/network-faucets.html",
+        href: "",
         target: "_blank",
         icon: ArrowTopRightOnSquareIcon,
       },
@@ -205,7 +205,7 @@ const depositMethods = computed(() => {
         label: "Top-up with cash",
         description: "Buy tokens using a card or another method for fiat",
         as: "a",
-        href: "https://zksync.dappradar.com/ecosystem?category=non_dapps_on_off_ramps",
+        href: "",
         target: "_blank",
         icon: ArrowTopRightOnSquareIcon,
       },
@@ -216,7 +216,7 @@ const depositMethods = computed(() => {
         label: "Bridge from other networks",
         description: "Explore ecosystem of third party bridges",
         as: "a",
-        href: "https://zksync.dappradar.com/ecosystem?category=defi_bridge",
+        href: "",
         target: "_blank",
         icon: ArrowTopRightOnSquareIcon,
       },
